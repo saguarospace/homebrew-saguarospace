@@ -1,4 +1,4 @@
-# Saguarospace Saguarospace
+# Saguaro Space Homebrew Formulae
 
 ## How do I install these formulae?
 
