@@ -1,7 +1,7 @@
 # Modified from https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/prettier.rb
 require "language/node"
 
-class TypeScriptLanguageServer < Formula
+class TypescriptLanguageServer < Formula
   desc "Language Server Protocol implementation for TypeScript wrapping tsserver."
   homepage "https://www.npmjs.com/package/typescript-language-server"
   url "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.8.0.tgz"
