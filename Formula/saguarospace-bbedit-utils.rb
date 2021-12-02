@@ -23,7 +23,8 @@ class SaguarospaceBbeditUtils < Formula
     mkdir -p "$HOME/#{language_modules}"
     mkdir -p "$HOME/#{scripts}"
     ln -sf "#{opt_prefix}/#{language_modules}/#{lilypond}" "$HOME/#{language_modules}/#{lilypond}"
-    cp -f "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/#{scripts}/#{engrave}"
+    cp "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/#{scripts}/#{engrave}"
+    chmod +x "$HOME/#{scripts}/#{engrave}"
     
     EOS
   end
