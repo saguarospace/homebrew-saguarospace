@@ -6,14 +6,16 @@ class SaguarospaceBbeditUtils < Formula
   license "MIT"
 
   def install
-    prefix.install Dir["Library"]
-    opt_prefix.install_symlink Dir["Library/*"]
+    prefix.install Dir["Application Support"]
+    opt_prefix.install_symlink Dir["Application Support/*"]
   end
   
   def caveats
-    language_modules = "Library/Application Support/BBEdit/Language Modules"
-    scripts = "Library/Application Support/BBEdit/Scripts"
+    
+    language_modules = "Application Support/BBEdit/Language Modules"
+    scripts = "Application Support/BBEdit/Scripts"
     lilypond = "lilypond.plist"
+    hcl = "hcl.plist"
     engrave = "Engrave with LilyPond"
     
     <<~EOS
@@ -22,8 +24,9 @@ class SaguarospaceBbeditUtils < Formula
     
     mkdir -p "$HOME/#{language_modules}"
     mkdir -p "$HOME/#{scripts}"
-    ln -sf "#{opt_prefix}/#{language_modules}/#{lilypond}" "$HOME/#{language_modules}/#{lilypond}"
-    ln -sf "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/#{scripts}/#{engrave}"
+    ln -sf "#{opt_prefix}/#{language_modules}/#{lilypond}" "$HOME/Library/#{language_modules}/#{lilypond}"
+    ln -sf "#{opt_prefix}/#{language_modules}/#{hcl}" "$HOME/Library/#{language_modules}/#{hcl}"
+    ln -sf "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/Library/#{scripts}/#{engrave}"
     chmod +x "$HOME/#{scripts}/#{engrave}"
     
     EOS
