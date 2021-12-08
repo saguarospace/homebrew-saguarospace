@@ -27,7 +27,7 @@ class SaguarospaceBbeditUtils < Formula
     ln -sf "#{opt_prefix}/#{language_modules}/#{lilypond}" "$HOME/Library/#{language_modules}/#{lilypond}"
     ln -sf "#{opt_prefix}/#{language_modules}/#{hcl}" "$HOME/Library/#{language_modules}/#{hcl}"
     ln -sf "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/Library/#{scripts}/#{engrave}"
-    chmod +x "$HOME/#{scripts}/#{engrave}"
+    chmod +x "$HOME/Library/#{scripts}/#{engrave}"
     
     EOS
   end
