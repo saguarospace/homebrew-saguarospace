@@ -1,8 +1,8 @@
 class SaguarospaceBbeditUtils < Formula
   desc "Saguaro Space BBEdit Utilities"
   homepage ""
-  url "https://github.com/saguarospace/saguarospace-bbedit-utils/releases/download/v0.0.4/saguarospace-bbedit-utils.tar.gz"
-  sha256 "1eb80ebd812352d8ea12435924bef4e19e54f18ee0f8b6e67315b36ee398bee8"
+  url "https://github.com/saguarospace/saguarospace-bbedit-utils/releases/download/v0.0.5/saguarospace-bbedit-utils.tar.gz"
+  sha256 "fbcc0257547c71d7347fbe47e1b9d75791b087d054dc52285eafedca90a8af7c"
   license "MIT"
 
   def install
@@ -16,6 +16,7 @@ class SaguarospaceBbeditUtils < Formula
     scripts = "Application Support/BBEdit/Scripts"
     lilypond = "lilypond.plist"
     hcl = "hcl.plist"
+    nginx = "nginx.plist"
     engrave = "Engrave with LilyPond"
     
     <<~EOS
@@ -26,6 +27,7 @@ class SaguarospaceBbeditUtils < Formula
     mkdir -p "$HOME/#{scripts}"
     ln -sf "#{opt_prefix}/#{language_modules}/#{lilypond}" "$HOME/Library/#{language_modules}/#{lilypond}"
     ln -sf "#{opt_prefix}/#{language_modules}/#{hcl}" "$HOME/Library/#{language_modules}/#{hcl}"
+    ln -sf "#{opt_prefix}/#{language_modules}/#{nginx}" "$HOME/Library/#{language_modules}/#{nginx}"
     ln -sf "#{opt_prefix}/#{scripts}/#{engrave}" "$HOME/Library/#{scripts}/#{engrave}"
     chmod +x "$HOME/Library/#{scripts}/#{engrave}"
     
