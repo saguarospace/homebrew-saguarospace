@@ -2,7 +2,7 @@ class SaguarospaceBbeditUtils < Formula
   desc "Saguaro Space BBEdit Utilities"
   homepage ""
   url "https://github.com/saguarospace/saguarospace-bbedit-utils/releases/download/v0.0.5/saguarospace-bbedit-utils.tar.gz"
-  sha256 "fbcc0257547c71d7347fbe47e1b9d75791b087d054dc52285eafedca90a8af7c"
+  sha256 "06d3bd7acfae81770a2aafab4324508467470d9bd1ba40508b5239cdd03423ff"
   license "MIT"
 
   def install
